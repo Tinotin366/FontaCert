@@ -22,11 +22,11 @@ except mariadb.Error as e:
 
 # Instanciar Cursor (Cursor de instancia)
 # Obtener Cursor
-# Titulares = [0, "NombreTitular", "CIFNIF"]
+# Titulares = [0, "Titular", "CIFNIF"]
 cur = ConnectDB.cursor()
 # Ejecucion de la consulta
-cur.execute("SELECT Id_Titular, CIFNIF, NombreTitular FROM Titulares;",)
+cur.execute("SELECT Id_Titular, CIFNIF, Titular FROM Titulares;",)
 
 # Print Result-set (Conjunto Resultante)
-for (IdTitular, CIFNIF, NombreTitular) in cur:
-    print(f"IdTitular: {IdTitular} \t CIFNIF:      {CIFNIF} \t   Nombre Titular: {NombreTitular}"   )
+for (IdTitular, CIFNIF, Titular) in cur:
+    print(f"IdTitular: {IdTitular} \t CIFNIF:      {CIFNIF} \t   Nombre Titular: {Titular}"   )

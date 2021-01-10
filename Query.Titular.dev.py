@@ -32,11 +32,11 @@ sys.exit(1)
 
 # Instanciar Cursor (Cursor de instancia)
 # Obtener Cursor
-Titulares = [0, "NombreTitular", "CIFNIF"]
+Titulares = [0, "Titular", "CIFNIF"]
 cur = ConnectDB.cursor()
 
-cur.execute("SELECT Id_Titular, NombreTitular, CIFNIF FROM Titular;",)
+cur.execute("SELECT Id_Titular, Titular, CIFNIF FROM Titular;",)
 #
 # Print Result-set
-for (IdTitular, NombreTitular,CIFNIF) in cur:
-    print(f"IdTitular: {IdTitular}, Nombre Titular: {NombreTitular}, CIFNIF {CIFNIF}")
+for (IdTitular, Titular,CIFNIF) in cur:
+    print(f"IdTitular: {IdTitular}, Nombre Titular: {Titular}, CIFNIF {CIFNIF}")

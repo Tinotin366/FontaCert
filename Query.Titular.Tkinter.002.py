@@ -39,7 +39,7 @@ def QueryTitulares():
 
     Cur = con.cursor()
 
-    Cur.execute("SELECT Id_Titular, CIFNIF, NombreTitular FROM Titulares;")
+    Cur.execute("SELECT Id_Titular, CIFNIF, Titular FROM Titulares;")
     result = Cur.fetchall()
 
     for index, x in enumerate(result):
@@ -51,7 +51,7 @@ def QueryTitulares():
     print("Aqui estoy")
     l1 = Label(Titular,text='IdTitular',font=font_text)
     l2 = Label(Titular,text='CIFNIF',font=font_text)
-    l3 = Label(Titular,text='NombreTitular',font=font_text)
+    l3 = Label(Titular,text='Titular',font=font_text)
 
     btn_ext = Button(Titular,text='Exit',font=font_text,command=log.destroy,borderwidth=2,fg='#eb4d4b')
     l1.grid(row=0,column=0,padx=20)
@@ -61,7 +61,7 @@ def QueryTitulares():
     btn_ext.grid(row=index+2,columnspan=3,ipadx=540)
 
 # # Print Result-set (Conjunto Resultante)
-# for (IdTitular, CIFNIF, NombreTitular) in cur:
-#     print(f"IdTitular: {IdTitular} \t CIFNIF:      {CIFNIF} \t   Nombre Titular: {NombreTitular}"   )
+# for (IdTitular, CIFNIF, Titular) in cur:
+#     print(f"IdTitular: {IdTitular} \t CIFNIF:      {CIFNIF} \t   Nombre Titular: {Titular}"   )
 
 Titulares.mainloop()

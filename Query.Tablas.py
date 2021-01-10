@@ -22,7 +22,7 @@ except mariadb.Error as e:
 
 # Instanciar Cursor (Cursor de instancia)
 # Obtener Cursor
-# Titulares = [0, "NombreTitular", "CIFNIF"]
+# Titulares = [0, "Titular", "CIFNIF"]
 cur = ConnectDB.cursor()
 # Ejecucion de la consulta
 cur.execute("SHOW TABLES;",)

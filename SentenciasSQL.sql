@@ -1,4 +1,4 @@
-select  Titulares.Id_Titular, Titulares.NombreTitular,Titulares.CIFNIF, \
+select  Titulares.Id_Titular, Titulares.Titular,Titulares.CIFNIF, \
         TitularesDireccion.Id_Via, TitularesDireccion.NombreVia, TitularesDireccion.Numero, \
         TitularesDireccion.Escalera, TitularesDireccion.Piso, TitularesDireccion.Puerta, TitularesDireccion.Id_Municipio \
          from Titulares, TitularesDireccion \
@@ -17,7 +17,7 @@ SELECT * FROM Municipios WHERE CP LIKE '296%';
 SELECT TitularesDireccion.Id_Titular, Municipios.Poblacion, Municipios.Municipio, Municipios.CP  \
 FROM TitularesDireccion INNER JOIN Municipios ON  TitularesDireccion.Id_Poblacion =  Municipios.CP;
 
-SELECT Titulares.Id_Titular, Titulares.NombreTitular, Titulares.CIFNIF, TitularesDireccion.Id_Via, \
+SELECT Titulares.Id_Titular, Titulares.Titular, Titulares.CIFNIF, TitularesDireccion.Id_Via, \
 TitularesDireccion.NombreVia, TitularesDireccion.Numero, TitularesDireccion.Escalera, TitularesDireccion.Piso,\
  TitularesDireccion.Puerta, Municipios.Poblacion, Municipios.Municipio, Municipios.CP \
   FROM  Titulares, TitularesDireccion LEFT JOIN Municipios ON  TitularesDireccion.Id_Poblacion =  Municipios.Id_Poblacion \

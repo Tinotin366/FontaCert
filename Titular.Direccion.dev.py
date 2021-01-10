@@ -23,7 +23,7 @@ ConnectDB.autocommit = False
 
 # Instanciar Cursor (Cursor de instancia)
 # Obtener Cursor
-# Titulares = [0, "NombreTitular", "CIFNIF"]
+# Titulares = [0, "Titular", "CIFNIF"]
 cur = ConnectDB.cursor()
 # Ejecucion de la consulta
 
@@ -36,7 +36,7 @@ def Titulares():
 
     Id_Titular = int(input("ID del Titular: "))
     CIFNIF = str(input("CIF/NIF: "))
-    NombreTitular= str(input("Nombre del Titular: "))
+    Titular= str(input("Nombre del Titular: "))
 
     # Tabla Direcciones Titulares
 
@@ -56,13 +56,13 @@ def Titulares():
 
 
 
-    Titular = [Id_Titular, CIFNIF, NombreTitular]
+    Titular = [Id_Titular, CIFNIF, Titular]
     Direccion = [Id_Direccion, Id_Via, NombreVia, Numero, Escalera, Piso, Puerta, Id_Poblacion]
 
     print(Titular[0])
     print (f"Los datos introducidos son: \n Titular: {Titular[0]} \n CIFNIF:      {Titular[1]} \n   Nombre Titular: {Titular[2]}")
 
-    SentenciaInsertSQL = "INSERT INTO Titulares (Id_Titular, CIFNIF, NombreTitular) VALUES (%s,%s,%s)"
+    SentenciaInsertSQL = "INSERT INTO Titulares (Id_Titular, CIFNIF, Titular) VALUES (%s,%s,%s)"
     DatosInsertSQL =(Titular[0],Titular[1],Titular[2])
     print(DatosInsertSQL)
     # print(str(SentenciaInsertSQL))
