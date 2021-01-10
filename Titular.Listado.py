@@ -5,6 +5,7 @@ import mariadb
 # Python 3.8.6
 # Conectar a la plataforma MariaDB utilizando la función connect () con los atributos relevantes.
 import sys
+import os
 from conf import db
 
 # Instanciar Connection
@@ -17,7 +18,11 @@ except mariadb.Error as e:
     print(f"Error conectando a la Plataforma MariaDB: {e}")
     sys.exit(1)
 
+def cls():
+    os.system('cls' if os.name=='nt' else 'clear')
 
+# now, to clear the screen
+cls()
 
 # Cree un cursor llamando al método cursor () en la conexión:
 
