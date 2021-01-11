@@ -31,8 +31,9 @@ cls()
 # Titulares = [0, "Titular", "CIFNIF"]
 cur = ConnectDB.cursor()
 # Ejecucion de la consulta
-cur.execute("SELECT Id_Titular, CIFNIF, Titular FROM Titulares;",)
+cur.execute("SELECT Certificado, Certificados.Id_Titular, CIFNIF, Titular  FROM Certificados LEFT JOIN Titulares ON  Certificados.Id_Titular =  Titulares.Id_Titular;",)
 
 # Print Result-set (Conjunto Resultante)
-for (IdTitular, CIFNIF, Titular) in cur:
-    print(f"IdTitular: {IdTitular} \t CIFNIF:      {CIFNIF} \t   Nombre Titular: {Titular}"   )
+print("Certificado:  \t   ID Titular \t CIFNIF:\t  Titular:       \t\n")
+for (Certificado, Id_Titular, CIFNIF, Titular) in cur:
+    print(f"\t{Certificado} \t  {Id_Titular}\t   {CIFNIF}       {Titular} \t")
