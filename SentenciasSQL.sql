@@ -22,3 +22,5 @@ TitularesDireccion.NombreVia, TitularesDireccion.Numero, TitularesDireccion.Esca
  TitularesDireccion.Puerta, Municipios.Poblacion, Municipios.Municipio, Municipios.CP \
   FROM  Titulares, TitularesDireccion LEFT JOIN Municipios ON  TitularesDireccion.Id_Poblacion =  Municipios.Id_Poblacion \
   WHERE Titulares.Id_Titular = TitularesDireccion.Id_Direccion;
+
+SET  @Search = '%Mar%'; SELECT Id_Titular, CIFNIF, Titular FROM Titulares WHERE Titular  LIKE @Search OR CIFNIF LIKE @Search;

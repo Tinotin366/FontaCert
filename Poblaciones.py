@@ -7,6 +7,9 @@ import mariadb
 import sys
 import os
 from conf import db
+from Colors import bcolors
+from Funciones import *
+
 
 # Instanciar Connection
 
@@ -18,11 +21,10 @@ except mariadb.Error as e:
     print(f"Error conectando a la Plataforma MariaDB: {e}")
     sys.exit(1)
 
-def cls():
-    os.system('cls' if os.name=='nt' else 'clear')
 
-# now, to clear the screen
-cls()
+# now, to cleaner the screen
+cleaner()
+Cabecera()
 
 # Cree un cursor llamando al método cursor () en la conexión:
 
@@ -31,9 +33,13 @@ cls()
 # Titulares = [0, "Titular", "CIFNIF"]
 cur = ConnectDB.cursor()
 # Ejecucion de la consulta
-cur.execute("SELECT Id_Titular, CIFNIF, Titular FROM Titulares;",)
+cur.execute("SELECT Id_Poblacion, Poblacion, Municipio, Provincia,CP  FROM  Municipios",)
 
 # Print Result-set (Conjunto Resultante)
-print(f"\tIdTitular: \t CIFNIF:      \t   Nombre Titular: "   )
-for (IdTitular, CIFNIF, Titular) in cur:
-    print(f"\t {IdTitular} \t       {CIFNIF} \t   {Titular}"   )
+print("\t %-8s %-30s %-30s %-15s %-10s " % ('Id Poblacion:','Poblacion:','Municipio:','Provincia:','CP:'))
+for (Id_Poblacion, Poblacion, Municipio, Provincia, CP) in cur:
+    # print(f"\t {Id_Poblacion}\t{Poblacion}\t\t  {Municipio}\t{CP}"   )
+    print("\t %-8s %-30s %-30s %-15s %-10s " % (Id_Poblacion, Poblacion, Municipio, Provincia,CP))
+
+pause()
+cleaner()

@@ -7,6 +7,7 @@ import mariadb
 import sys
 import os
 from conf import db
+from Funciones import *
 
 # Instanciar Connection
 
@@ -18,12 +19,8 @@ except mariadb.Error as e:
     print(f"Error conectando a la Plataforma MariaDB: {e}")
     sys.exit(1)
 
-def cls():
-    os.system('cls' if os.name=='nt' else 'clear')
-
-# now, to clear the screen
-cls()
-
+cleaner()
+Cabecera()
 # Cree un cursor llamando al método cursor () en la conexión:
 
 # Instanciar Cursor (Cursor de instancia)
@@ -37,3 +34,5 @@ cur.execute("SELECT Certificado, Certificados.Id_Titular, CIFNIF, Titular  FROM 
 print("Certificado:  \t   ID Titular \t CIFNIF:\t  Titular:       \t\n")
 for (Certificado, Id_Titular, CIFNIF, Titular) in cur:
     print(f"\t{Certificado} \t  {Id_Titular}\t   {CIFNIF}       {Titular} \t")
+pause()
+cleaner()

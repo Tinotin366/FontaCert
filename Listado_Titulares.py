@@ -6,6 +6,8 @@ import mariadb
 # Conectar a la plataforma MariaDB utilizando la función connect () con los atributos relevantes.
 import sys
 from conf import db
+from Funciones import *
+from Colors import bcolors
 
 # Instanciar Connection
 
@@ -20,7 +22,9 @@ except mariadb.Error as e:
 
 
 # Cree un cursor llamando al método cursor () en la conexión:
-
+cleaner()
+Cabecera()
+print ("\t\tListado Titulares\n")
 # Instanciar Cursor (Cursor de instancia)
 # Obtener Cursor
 # Titulares = [0, "Titular", "CIFNIF"]
@@ -30,6 +34,9 @@ cur.execute("SELECT Titulares.Id_Titular, Titulares.CIFNIF, Titulares.Titular,  
 
 # Print Result-set (Conjunto Resultante)
 # Header
-print(f"Id:   CIFNIF: \t   Nombre Titular: \t  Id_Via  \t NombreVia:  \t Numero:  \t Id Titular:  \t Escalera:  \t Piso:  \t Puerta:  \t Poblacion:  \t Municipio:  \t CP: \t"   )
+print("%-4s %-10s %-30s %-10s %-40s %-7s %-10s %-5s %-7s %25s %-20s %-5s " % ('Id:', 'CIFNIF:', 'Titular:', 'Id_Via', 'NombreVia:', 'Numero:', 'Escalera:', 'Piso:', 'Puerta:', 'Poblacion:', 'Municipio:', 'CP:' ))
 for (Id_Titular, CIFNIF, Titular, Id_Via, NombreVia, Numero, Escalera, Piso, Puerta, Poblacion, Municipio, CP) in cur:
-    print(f"{Id_Titular}        {CIFNIF} \t  {Titular}  \t \t {Id_Via} \t  {NombreVia} \t  {Numero} \t  {Id_Titular} \t  {Escalera} \t  {Piso} \t  {Puerta} \t  {Poblacion} \t  {Municipio} \t {CP} \t"   )
+    print("%-4s %-10s %-30s %-10s %-40s %-7s %-10s %-5s %-7s %-25s %-20s %5s" % (Id_Titular, CIFNIF ,Titular ,Id_Via ,NombreVia , Numero, Escalera, Piso, Puerta, Poblacion, Municipio, CP))
+
+pause()
+cleaner()
