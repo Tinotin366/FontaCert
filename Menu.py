@@ -6,6 +6,8 @@ import mariadb
 # Conectar a la plataforma MariaDB utilizando la función connect () con los atributos relevantes.
 import sys
 import os
+from Funciones import clear
+from Funciones import pause
 from conf import db
 from Colors import bcolors
 
@@ -13,11 +15,11 @@ from Colors import bcolors
 # Instalar pip install pynput # para captura de pulsacion de teclas
 
 
-def cls():
-    os.system('cls' if os.name=='nt' else 'clear')
-
-# now, to clear the screen
-cls()
+def clear():
+    os.system('clear' if os.name=='nt' else 'clear')
+#
+# # now, to clear the screen
+clear()
 
 # def pulsa(tecla):
 # 	print('Se ha pulsado la tecla ' + str(tecla))
@@ -25,7 +27,7 @@ cls()
 # with kb.Listener(pulsa) as escuchador:
 # 	escuchador.join()
 
-cls()
+clear()
 
 
 while True:
@@ -67,27 +69,34 @@ while True:
 
         opcion = input("\n\t\t Opcion: ")
         if opcion == "1":
-            cls()
-            os.system("/usr/bin/python CertificadosListado.py")
+            clear()
+            os.system("/usr/bin/python Listado_Certificados.py")
 
         if opcion == "2":
-            cls()
-            os.system("/usr/bin/python TitularListado.py")
+            clear()
+            os.system("/usr/bin/python Listado_Titular.py")
 
-        if opcion == "3":
-            cls()
-            print('\n\tTitulares Direcciones')
+        if opcion == "22":
+            clear()
+            os.system("/usr/bin/python Nuevo_Titular.py")
+
 
         if opcion == "25" or opcion == "2":
-            cls()
-            os.system("/usr/bin/python TitularDireccionCompletaListado.py")
+            clear()
+            os.system("/usr/bin/python Listado_Titular_Direccion_Completa.py")
+
+
+        if opcion == "3":
+            clear()
+            print('\n\tTitulares Direcciones')
+
 
         if opcion == "21":
-            cls()
-            os.system("/usr/bin/python TitularNuevo.py")
+            clear()
+            os.system("/usr/bin/python Busqueda_Titular.py")
 
         if opcion == 'C' or opcion == 'c':
-            cls()
+            clear()
 
         if opcion == 'Q' or opcion == 'q':
             break
