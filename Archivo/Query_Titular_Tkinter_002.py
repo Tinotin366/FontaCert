@@ -6,7 +6,7 @@ import tkinter as tk
 from tkinter import ttk
 
 # Python 3.8.6
-# Conectar a la plataforma MariaDB utilizando la función connect () con los atributos relevantes.
+
 import sys
 from conf import db
 

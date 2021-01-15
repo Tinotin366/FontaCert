@@ -12,7 +12,7 @@ print(data)
 
 # import mariadb
 # # Python 3.8.6
-# # Conectar a la plataforma MariaDB utilizando la función connect () con los atributos relevantes.
+# 
 
 #
 # # Instanciar Connection

@@ -3,7 +3,7 @@
 
 import mariadb
 # Python 3.8.6
-# Conectar a la plataforma MariaDB utilizando la función connect () con los atributos relevantes.
+
 import sys
 import os
 from conf import db
@@ -33,12 +33,15 @@ Cabecera()
 # Titulares = [0, "Titular", "CIFNIF"]
 cur = ConnectDB.cursor()
 # Ejecucion de la consulta
-cur.execute("SELECT Id_Titular, CIFNIF, Titular FROM Titulares;",)
+
+
+# Id_Instalacion, Id_Dotacion, CaudalMaximo, ØAcometida, ØContador, OrigenSuministro, TipoInstalacion, UsoDestino
+cur.execute("SELECT Id_Instalacion, Id_Dotacion, CaudalMaximo, ØAcometida, ØContador, OrigenSuministro, TipoInstalacion, UsoDestino FROM Instalaciones;",)
 
 # Print Result-set (Conjunto Resultante)
-print(f"\tIdTitular: \t CIFNIF:      \t   Nombre Titular: "   )
-for (IdTitular, CIFNIF, Titular) in cur:
-    print(f"\t {IdTitular} \t       {CIFNIF} \t   {Titular}"   )
+print( "%-4s %-10s %-12s %-10s %-9s %-40s %-15s %-25s " % ('Id', 'Dotacion', 'CaudalMaximo', 'ØAcometida', 'ØContador', 'OrigenSuministro', 'TipoInstalacion', 'UsoDestino'))
+for (Id_Instalacion, Id_Dotacion, CaudalMaximo, ØAcometida, ØContador, OrigenSuministro, TipoInstalacion, UsoDestino) in cur:
+    print("%-4s %-10s %-12s %-10s %-9s %-40s %-15s %-25s " %  (Id_Instalacion, Id_Dotacion, CaudalMaximo, ØAcometida, ØContador, OrigenSuministro, TipoInstalacion, UsoDestino ))
 
 pause()
 cleaner()

@@ -3,7 +3,7 @@
 
 import mariadb
 # Python 3.8.6
-# Conectar a la plataforma MariaDB utilizando la función connect () con los atributos relevantes.
+
 import sys
 import os
 from conf import db
@@ -33,11 +33,14 @@ Cabecera()
 # Titulares = [0, "Titular", "CIFNIF"]
 cur = ConnectDB.cursor()
 # Ejecucion de la consulta
-cur.execute("SELECT Id_Titular, CIFNIF, Titular FROM Titulares;",)
+cur.execute("SELECT Id_Instalacion, CIFNIF, Titular FROM Titulares;",)
 
 # Print Result-set (Conjunto Resultante)
-print(f"\tIdTitular: \t CIFNIF:      \t   Nombre Titular: "   )
-for (IdTitular, CIFNIF, Titular) in cur:
+
+# Id_Instalacion, Id_Dotacion, CaudalMaximo, ØAcometida, ØContador, OrigenSuministro, TipoInstalacion, UsoDestino
+
+print(f"\tId: \t CIFNIF:      \t   Nombre Titular: "   )
+for (Id_Instalacion, Id_Dotacion, CaudalMaximo, ØAcometida, ØContador, OrigenSuministro, TipoInstalacion, UsoDestino) in cur:
     print(f"\t {IdTitular} \t       {CIFNIF} \t   {Titular}"   )
 
 pause()

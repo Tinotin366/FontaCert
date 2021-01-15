@@ -24,3 +24,5 @@ TitularesDireccion.NombreVia, TitularesDireccion.Numero, TitularesDireccion.Esca
   WHERE Titulares.Id_Titular = TitularesDireccion.Id_Direccion;
 
 SET  @Search = '%Mar%'; SELECT Id_Titular, CIFNIF, Titular FROM Titulares WHERE Titular  LIKE @Search OR CIFNIF LIKE @Search;
+
+RENAME TABLE Dotacion TO Dotaciones

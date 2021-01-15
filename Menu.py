@@ -3,7 +3,7 @@
 
 import mariadb
 # Python 3.8.6
-# Conectar a la plataforma MariaDB utilizando la función connect () con los atributos relevantes.
+
 import sys
 import os
 from Funciones import *
@@ -32,17 +32,18 @@ while True:
 
         print (f"\t \
                 [1] {bcolors.OkBlue}Certificados{bcolors.EndC}\n\t\t \
-            [11] {bcolors.OkGreen}Buscar Certificados{bcolors.EndC} \n\t\t \
-            [12] {bcolors.OkGreen}Nuevo Certificados{bcolors.EndC}\n\t\t \
-            [13] {bcolors.OkGreen}Editar Certificados{bcolors.EndC}\n\t\t \
+            [11] {bcolors.OkGreen}Buscar Certificado{bcolors.EndC} \n\t\t \
+            [12] {bcolors.OkGreen}Nuevo Certificado{bcolors.EndC}\n\t\t \
+            [13] {bcolors.OkGreen}Editar Certificado{bcolors.EndC}\n\t\t \
             [14] {bcolors.OkGreen}Listado Certificados{bcolors.EndC}\n\t\t \
-            [15] {bcolors.OkGreen}Eliminar Certificados{bcolors.EndC}\n\n\t \
+            [15] {bcolors.OkGreen}Eliminar Certificado{bcolors.EndC}\n\n\t \
                 [2] {bcolors.OkBlue}Titulares{bcolors.EndC}\n\t\t \
             [21] {bcolors.OkGreen}Buscar Titular{bcolors.EndC}\n\t\t \
             [22] {bcolors.OkGreen}Nuevo Titular{bcolors.EndC}\n\t\t \
             [23] {bcolors.OkGreen}Editar Titular{bcolors.EndC}\n\t\t \
             [24] {bcolors.OkGreen}Listado Titulares{bcolors.EndC}\n\t\t \
-            [25] {bcolors.OkGreen}Eliminar Titular{bcolors.EndC}\n\n\t \
+            [25] {bcolors.OkGreen}Clonar Titular a Instalacion{bcolors.EndC}\n\t\t \
+            [26] {bcolors.OkGreen}Eliminar Titular{bcolors.EndC}\n\n\t \
                 [3] {bcolors.OkBlue}Instalaciones{bcolors.EndC}\n\t\t \
             [31] {bcolors.OkGreen}Buscar Instalacion{bcolors.EndC}\n\t\t \
             [32] {bcolors.OkGreen}Nueva Instalacion{bcolors.EndC}\n\t\t \
@@ -61,8 +62,9 @@ while True:
             [53] {bcolors.OkGreen}Editar Dotacion{bcolors.EndC}\n\t\t \
             [54] {bcolors.OkGreen}Listado Dotaciones{bcolors.EndC}\n\t\t \
             [54] {bcolors.OkGreen}Eliminar Dotacion{bcolors.EndC}\n\n\t \
-                [c]{bcolors.OkBlue} Limpiar{bcolors.EndC}\n\n\t \
                 [q] {bcolors.BgRed}Salir         {bcolors.EndC}")
+                # [c]{bcolors.OkBlue} Limpiar{bcolors.EndC}\n\n\t \
+
         # print ('                                                                          ')
 
         print ('\n\t\t___________________________________________________________________________')
@@ -70,16 +72,16 @@ while True:
         opcion = input("\n\t\t Opcion: ")
 
         if opcion == "1":
-            os.system("/usr/bin/python Certificado.py")
+            os.system("/usr/bin/python Certificados.py")
 
         if opcion == "11":
-            os.system("/usr/bin/python Nuevo_Certificado.py")
+            os.system("/usr/bin/python Buscar_Certificado.py")
 
         if opcion == "12":
-            os.system("/usr/bin/python Edicion_Certificado.py")
+            os.system("/usr/bin/python Nuevo_Certificado.py")
 
         if opcion == "13":
-            os.system("/usr/bin/python Desarrollo.py")
+            os.system("/usr/bin/python Edicion_Certificado.py")
 
         if opcion == "14":
             os.system("/usr/bin/python Listado_Certificados.py")
@@ -103,7 +105,11 @@ while True:
         if opcion == "24":
             os.system("/usr/bin/python Listado_Titulares.py")
 
-        if opcion == "25" or opcion == "2":
+        if opcion == "25":
+            os.system("/usr/bin/python Desarrollo.py")
+            # os.system("/usr/bin/python Clonar_Titulares2Instalacion.py")
+
+        if opcion == "26" or opcion == "2":
             os.system("/usr/bin/python Eliminar_Titular.py")
 
 

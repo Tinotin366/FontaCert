@@ -3,7 +3,7 @@
 
 import mariadb
 # Python 3.8.6
-# Conectar a la plataforma MariaDB utilizando la función connect () con los atributos relevantes.
+
 import sys
 import os
 from Colors import bcolors
@@ -42,7 +42,6 @@ Busqueda = str(input("\t\t\t\tTitular (Min 3 chr): "))
 Busqueda = "'%" + Busqueda + "%'"
 # SetBusqueda = "SET  @Busqueda = " + "'%" + Busqueda + "%'"
 
-# sql = "SELECT column FROM table WHERE col1=%s AND col2=%s"
 Sql = "SELECT Id_Titular, CIFNIF, Titular FROM Titulares WHERE Titular  LIKE " + Busqueda + " OR CIFNIF LIKE " + Busqueda +";"
 
 # cursor.execute(sql, params)
