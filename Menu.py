@@ -71,94 +71,102 @@ while True:
 
         opcion = input("\n\t\t Opcion: ")
 
-        if opcion == "1":
+        if opcion == "1":   # Certificados
             os.system("/usr/bin/python Certificados.py")
 
-        if opcion == "11":
+        if opcion == "11":  # Buscar Certificado
             os.system("/usr/bin/python Buscar_Certificado.py")
 
-        if opcion == "12":
+        if opcion == "12":  # Nuevo Certificado
             os.system("/usr/bin/python Nuevo_Certificado.py")
 
-        if opcion == "13":
+        if opcion == "13":  # Editar Certificado
             os.system("/usr/bin/python Edicion_Certificado.py")
 
-        if opcion == "14":
+        if opcion == "14":  # Listado Certificados
             os.system("/usr/bin/python Listado_Certificados.py")
 
-        if opcion == "15":
+        if opcion == "15":  # Eliminar Certificado
             os.system("/usr/bin/python Eliminar_Certificado.py")
 
 
-        if opcion == "2":
+        if opcion == "2":   # Titulares
             os.system("/usr/bin/python Titulares.py")
 
-        if opcion == "21":
+        if opcion == "21":  # Buscar Titular
             os.system("/usr/bin/python Busqueda_Titular.py")
 
-        if opcion == "22":
+        if opcion == "22":  # Nuevo Titular
             os.system("/usr/bin/python Nuevo_Titular.py")
 
-        if opcion == "23":
+        if opcion == "23":  # Editar Titular
             os.system("/usr/bin/python Desarrollo.py")
 
-        if opcion == "24":
+        if opcion == "24":  # Listado Titulares
             os.system("/usr/bin/python Listado_Titulares.py")
 
-        if opcion == "25":
+        if opcion == "25":  # Clonar Titular a Instalacion
             os.system("/usr/bin/python Desarrollo.py")
             # os.system("/usr/bin/python Clonar_Titulares2Instalacion.py")
 
-        if opcion == "26" or opcion == "2":
+        if opcion == "26" or opcion == "2": # Eliminar Titular
             os.system("/usr/bin/python Eliminar_Titular.py")
 
 
-        if opcion == "3":
+        if opcion == "3": # Instalaciones
             os.system("/usr/bin/python Instalaciones.py")
 
-        if opcion == "31":
+        if opcion == "31": # Buscar Instalaciones
             os.system("/usr/bin/python Desarrollo.py")
 
-        if opcion == "32":
+        if opcion == "32": # Nueva Instalacion
             os.system("/usr/bin/python Desarrollo.py")
 
-        if opcion == "33":
+        if opcion == "33":  # Editar Instalacion # Listado Instalaciones
             os.system("/usr/bin/python Desarrollo.py")
 
-        if opcion == "4":
+        if opcion == "34":  # Listado Instalaciones
+            os.system("/usr/bin/python Desarrollo.py")
+
+        if opcion == "35":  # Eliminar Instalacion
+            os.system("/usr/bin/python Desarrollo.py")
+
+
+
+        if opcion == "4":   # Poblaciones y Municipios
             os.system("/usr/bin/python Poblaciones.py")
 
-        if opcion == "41":
+        if opcion == "41":  # Buscar Poblacion
             os.system("/usr/bin/python Desarrollo.py")
 
-        if opcion == "42":
+        if opcion == "42":  # Nueva Poblacion
             os.system("/usr/bin/python Desarrollo.py")
 
-        if opcion == "43":
+        if opcion == "43":  # Editar Poblacion
             os.system("/usr/bin/python Desarrollo.py")
 
-        if opcion == "44":
+        if opcion == "44":  # Listado Poblaciones
             os.system("/usr/bin/python Desarrollo.py")
 
-        if opcion == "45":
+        if opcion == "45":  # Eliminar Poblacion
             os.system("/usr/bin/python Desarrollo.py")
 
-        if opcion == "5":
+        if opcion == "5":   # Dotaciones
             os.system("/usr/bin/python Dotaciones.py")
 
-        if opcion == "51":
+        if opcion == "51":  # Buscar Dotacion
             os.system("/usr/bin/python Listado_Dotacion.py")
 
-        if opcion == "52":
+        if opcion == "52":  # Nueva Dotacion
             os.system("/usr/bin/python Desarrollo.py")
 
-        if opcion == "53":
+        if opcion == "53":  # Editar Dotacion
             os.system("/usr/bin/python Desarrollo.py")
 
-        if opcion == "54":
+        if opcion == "54":  # Listado de Dotaciones
             os.system("/usr/bin/python Desarrollo.py")
 
-        if opcion == "55":
+        if opcion == "55":  # Eliminar Dotacion
             os.system("/usr/bin/python Desarrollo.py")
 
         if opcion == 'C' or opcion == 'c':
