@@ -29,7 +29,7 @@ cur = ConnectDB.cursor()
 
 print ("Nuevo Titular")
 
-# Creacioin de la Variable de entrada para poder insertarla en la base de datos de TitularesForm
+# Creacion de la Variable de entrada para poder insertarla en la base de datos de TitularesForm
 
 def Titulares():
 # Tabla Titulares

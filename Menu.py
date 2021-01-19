@@ -120,7 +120,7 @@ while True:
             os.system("/usr/bin/python Desarrollo.py")
 
         if opcion == "32": # Nueva Instalacion
-            os.system("/usr/bin/python Desarrollo.py")
+            os.system("/usr/bin/python Nueva_Instalacion.py")
 
         if opcion == "33":  # Editar Instalacion # Listado Instalaciones
             os.system("/usr/bin/python Desarrollo.py")

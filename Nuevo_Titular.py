@@ -30,7 +30,7 @@ cleaner()
 Cabecera()
 print ("\t\tNuevo Titular\n")
 
-# Creacioin de la Variable de entrada para poder insertarla en la base de datos de TitularesForm
+# Creacion de la Variable de entrada para poder insertarla en la base de datos de TitularesForm
 
 
 
