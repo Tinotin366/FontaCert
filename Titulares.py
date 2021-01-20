@@ -22,7 +22,7 @@ except mariadb.Error as e:
     sys.exit(1)
 
 
-# now, to cleaner the screen
+
 cleaner()
 Cabecera()
 

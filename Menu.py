@@ -13,7 +13,7 @@ from Colors import bcolors
 # import TitularDireccionCompletaListado
 # Instalar pip install pynput # para captura de pulsacion de teclas
 
-# # now, to cleaner the screen
+#
 
 cleaner()
 
@@ -169,7 +169,7 @@ while True:
             os.system("/usr/bin/python Tipo_Dotacion.py")
 
         if opcion == "55":  # Eliminar Dotacion
-                os.system("/usr/bin/python Desarrollo.py")
+                os.system("/usr/bin/python Listado_Tipo_Dotacion.py")
 
         if opcion == "56":  # Nuevo Tipo de Dotacion
             os.system("/usr/bin/python Nuevo_Tipo_Dotacion.py")

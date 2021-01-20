@@ -22,7 +22,7 @@ except mariadb.Error as e:
 
 
 
-# now, to cleaner the screen
+
 cleaner()
 
 # Cree un cursor llamando al método cursor () en la conexión:

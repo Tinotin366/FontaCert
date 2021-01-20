@@ -1,9 +1,6 @@
 #!/usr/bin/env python
-
-
-import mariadb
 # Python 3.8.6
-
+import mariadb
 import sys
 import os
 from conf import db
@@ -21,24 +18,20 @@ except mariadb.Error as e:
     print(f"Error conectando a la Plataforma MariaDB: {e}")
     sys.exit(1)
 
-
-
 cleaner()
 Cabecera()
-
+print ("\t\tListado Titulares\n")
 # Cree un cursor llamando al método cursor () en la conexión:
 
-# Instanciar Cursor (Cursor de instancia)
-# Obtener Cursor
-# Titulares = [0, "Titular", "CIFNIF"]
 cur = ConnectDB.cursor()
 # Ejecucion de la consulta
-cur.execute("SELECT Id_Titular, CIFNIF, Titular FROM Titulares;",)
+
+cur.execute("SELECT Id_TipoDotacion AS Id, Tipo FROM TipoDotacion;",)
 
 # Print Result-set (Conjunto Resultante)
-print(f"\tIdTitular: \t CIFNIF:      \t   Nombre Titular: "   )
-for (IdTitular, CIFNIF, Titular) in cur:
-    print(f"\t {IdTitular} \t       {CIFNIF} \t   {Titular}"   )
+print( 30*' ' + "%-4s %-15s" % ('Id', 'Tipo'))
+for (Id_TipoDotacion, Tipo) in cur:
+    print(30*' '+ "%-4s %-15s  " %  (Id_TipoDotacion, Tipo ))
 
 pause()
 cleaner()
