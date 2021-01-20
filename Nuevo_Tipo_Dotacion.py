@@ -28,31 +28,27 @@ cur = ConnectDB.cursor()
 # Ejecucion de la consulta
 cleaner()
 Cabecera()
-print ("\t\tNuevo Titular\n")
+print ("\t\tNuevo Tipo de Dotacion\n")
 
 # Creacion de la Variable de entrada para poder insertarla en la base de datos de TitularesForm
 
 
+Id_TipoDotacion = int(input("\t\tId Tipo Dotacion: "))
+Tipo = str(input("\t\tNombre Dotacion: "))
 
-IdTitular = int(input("\t\tID del Titular: "))
-CIFNIF = str(input("\t\tCIF/NIF: "))
-Titular= str(input("\t\tNombre del Titular: "))
+Tipo = [Id_TipoDotacion, Tipo]
+print(Tipo[0])
+print (f"\t\tLos datos introducidos son: Id Tipo Dotacion {Id_TipoDotacion} \t Tipo Dotacion: {Tipo} \n ")
 
-Titular = [IdTitular, CIFNIF, Titular]
-print(Titular[0])
-print (f"\t\tLos datos introducidos son: \n Titular: {Titular[0]} \n CIFNIF:      {Titular[1]} \n   Nombre Titular: {Titular[2]}")
+SentenciaInsertSQL = "INSERT INTO TipoDotacion (Id_TipoDotacion, Tipo) VALUES (%d, %s)"
+DatosInsertSQL=(Tipo[0], Tipo[1])
 
-SentenciaInsertSQL = "INSERT INTO Titulares (Id_Titular, CIFNIF, Titular) VALUES (%s,%s,%s)"
-DatosInsertSQL =(Titular[0],Titular[1],Titular[2])
-print(SentenciaInsertSQL)
-
-# print(str(SentenciaInsertSQL))
 # (Titular[0],Titular[1],Titular[2])
-cur.execute(SentenciaInsertSQL,DatosInsertSQL)
+cur.execute(SentenciaInsertSQL, DatosInsertSQL)
 ConnectDB.commit()
 cur.close()
 ConnectDB.close()
-print (f"\n\t\t Alta de el Titular nº: {Titular[0]}")
+print (f"\n\t\t Alta de Nuevo Tipo de Dotacion : {Id_TipoDotacion}")
 # Poner para solicitar si nuevo registro o Salir
 
 pause()

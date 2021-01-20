@@ -61,7 +61,9 @@ while True:
             [52] {bcolors.OkGreen}Nueva Dotacion{bcolors.EndC}\n\t\t \
             [53] {bcolors.OkGreen}Editar Dotacion{bcolors.EndC}\n\t\t \
             [54] {bcolors.OkGreen}Listado Dotaciones{bcolors.EndC}\n\t\t \
-            [54] {bcolors.OkGreen}Eliminar Dotacion{bcolors.EndC}\n\n\t \
+            [55] {bcolors.OkGreen}Listado Tipo de Dotacion{bcolors.EndC}\n\t\t \
+            [56] {bcolors.OkGreen}Nuevo Tipo de Dotacion{bcolors.EndC}\n\t\t \
+            [57] {bcolors.OkGreen}Eliminar Dotacion{bcolors.EndC}\n\n\t \
                 [q] {bcolors.BgRed}Salir         {bcolors.EndC}")
                 # [c]{bcolors.OkBlue} Limpiar{bcolors.EndC}\n\n\t \
 
@@ -163,10 +165,16 @@ while True:
         if opcion == "53":  # Editar Dotacion
             os.system("/usr/bin/python Desarrollo.py")
 
-        if opcion == "54":  # Listado de Dotaciones
-            os.system("/usr/bin/python Desarrollo.py")
+        if opcion == "54":  # Listado de Tipos de Dotacion
+            os.system("/usr/bin/python Tipo_Dotacion.py")
 
         if opcion == "55":  # Eliminar Dotacion
+                os.system("/usr/bin/python Desarrollo.py")
+
+        if opcion == "56":  # Nuevo Tipo de Dotacion
+            os.system("/usr/bin/python Nuevo_Tipo_Dotacion.py")
+
+        if opcion == "57":  # Eliminar Dotacion
             os.system("/usr/bin/python Desarrollo.py")
 
         if opcion == 'C' or opcion == 'c':

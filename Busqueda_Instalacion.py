@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-
-
 import mariadb
 # Python 3.8.6
 
