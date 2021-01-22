@@ -31,31 +31,19 @@ while True:
         # print ('                                                                          ')
 
         print (f"\t \
-                [1] {bcolors.OkBlue}Certificados{bcolors.EndC}\n\t\t \
-            [11] {bcolors.OkGreen}Buscar Certificado{bcolors.EndC} \n\t\t \
-            [12] {bcolors.OkGreen}Nuevo Certificado{bcolors.EndC}\n\t\t \
-            [13] {bcolors.OkGreen}Editar Certificado{bcolors.EndC}\n\t\t \
-            [14] {bcolors.OkGreen}Listado Certificados{bcolors.EndC}\n\t\t \
-            [15] {bcolors.OkGreen}Eliminar Certificado{bcolors.EndC}\n\n\t \
-                [2] {bcolors.OkBlue}Titulares{bcolors.EndC}\n\t\t \
-            [21] {bcolors.OkGreen}Buscar Titular{bcolors.EndC}\n\t\t \
-            [22] {bcolors.OkGreen}Nuevo Titular{bcolors.EndC}\n\t\t \
-            [23] {bcolors.OkGreen}Editar Titular{bcolors.EndC}\n\t\t \
-            [24] {bcolors.OkGreen}Listado Titulares{bcolors.EndC}\n\t\t \
-            [25] {bcolors.OkGreen}Clonar Titular a Instalacion{bcolors.EndC}\n\t\t \
-            [26] {bcolors.OkGreen}Eliminar Titular{bcolors.EndC}\n\n\t \
-                [3] {bcolors.OkBlue}Instalaciones{bcolors.EndC}\n\t\t \
-            [31] {bcolors.OkGreen}Buscar Instalacion{bcolors.EndC}\n\t\t \
-            [32] {bcolors.OkGreen}Nueva Instalacion{bcolors.EndC}\n\t\t \
-            [32] {bcolors.OkGreen}Editar Instalacion{bcolors.EndC}\n\t\t \
-            [34] {bcolors.OkGreen}Listado Instalaciones{bcolors.EndC}\n\t\t \
-            [35] {bcolors.OkGreen}Eliminar Instalacion{bcolors.EndC}\n\n\t \
-                [4] {bcolors.OkBlue}Poblaciones, Municipios{bcolors.EndC}\n\t\t \
-            [41] {bcolors.OkGreen}Buscar Poblacion{bcolors.EndC}\n\t\t \
-            [42] {bcolors.OkGreen}Nueva Poblacion{bcolors.EndC}\n\t\t \
-            [43] {bcolors.OkGreen}Editar Poblacion{bcolors.EndC}\n\t\t \
-            [44] {bcolors.OkGreen}Listado Poblaciones{bcolors.EndC}\n\t\t \
-            [44] {bcolors.OkGreen}Eliminar Poblacion{bcolors.EndC}\n\n\t \
+                [1] {bcolors.OkBlue}Certificados{bcolors.EndC}\t\t[2] {bcolors.OkBlue}Titulares{bcolors.EndC}\n\t\t \
+            [11] {bcolors.OkGreen}Buscar Certificado{bcolors.EndC}\t    [21] {bcolors.OkGreen}Buscar Titular{bcolors.EndC}\n\t\t \
+            [12] {bcolors.OkGreen}Nuevo Certificado{bcolors.EndC}\t    [22] {bcolors.OkGreen}Nuevo Titular{bcolors.EndC}\n\t\t \
+            [13] {bcolors.OkGreen}Editar Certificado{bcolors.EndC}\t    [23] {bcolors.OkGreen}Editar Titular{bcolors.EndC}\n\t\t \
+            [14] {bcolors.OkGreen}Listado Certificados{bcolors.EndC}\t    [24] {bcolors.OkGreen}Listado Titulares{bcolors.EndC}\n\t\t \
+            [15] {bcolors.OkGreen}Eliminar Certificado{bcolors.EndC}\t    [25] {bcolors.OkGreen}Clonar Titular{bcolors.EndC}\n\t\t \
+                                           [26] {bcolors.OkGreen}Eliminar Titular{bcolors.EndC}\n\n\t \
+                [3] {bcolors.OkBlue}Instalaciones{bcolors.EndC}\t\t [4] {bcolors.OkBlue}Poblaciones, Municipios{bcolors.EndC}\n\t\t \
+            [31] {bcolors.OkGreen}Buscar Instalacion{bcolors.EndC}\t     [41] {bcolors.OkGreen}Buscar Poblacion{bcolors.EndC}\n\t\t \
+            [32] {bcolors.OkGreen}Nueva Instalacion{bcolors.EndC}\t     [42] {bcolors.OkGreen}Nueva Poblacion{bcolors.EndC}\n\t\t \
+            [32] {bcolors.OkGreen}Editar Instalacion{bcolors.EndC}\t     [43] {bcolors.OkGreen}Editar Poblacion{bcolors.EndC}\n\t\t \
+            [34] {bcolors.OkGreen}Listado Instalaciones{bcolors.EndC}\t     [44] {bcolors.OkGreen}Listado Poblaciones{bcolors.EndC}\n\t\t \
+            [35] {bcolors.OkGreen}Eliminar Instalacion{bcolors.EndC}\t     [45] {bcolors.OkGreen}Eliminar Poblacion{bcolors.EndC}\n\n\t \
                 [5] {bcolors.OkBlue}Dotaciones{bcolors.EndC}\n\t\t \
             [51] {bcolors.OkGreen}Buscar Dotacion{bcolors.EndC}\n\t\t \
             [52] {bcolors.OkGreen}Nueva Dotacion{bcolors.EndC}\n\t\t \
